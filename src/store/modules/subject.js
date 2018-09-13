@@ -28,6 +28,7 @@ const state = {
 const getters = {
   // Filtering subjectMeta
   subjectMeta: state => {
+    console.log(state.subject);
     if (state.classify === 'movie') {
       return state.subject.year + '/' +
              state.subject.genres.join(' / ') + ' / ' +
@@ -60,6 +61,7 @@ const getters = {
 
 const mutations = {
   getSingleSubject (state, payload) {
+    console.log("in mutations");
     state.classify = payload.classify
     state.subject = payload.res
   }

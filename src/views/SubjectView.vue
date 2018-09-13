@@ -158,10 +158,13 @@ export default {
     }
   },
   created () {
+
+    console.log(this.$store.getters);
+    console.log(this.$store.getters.currentUser);
+    
     // Getting route params
     const id = this.$route.params.id
     const classify = this.$route.params.classify
-
     // Dispatching getSingleSubject
     this.$store.dispatch({
       type: 'getSingleSubject',

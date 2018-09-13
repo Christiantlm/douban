@@ -12,6 +12,8 @@ import DetailView from '../views/DetailView'
 import SearchView from '../views/SearchView'
 import LoginView from '../views/LoginView'
 import RegisterView from '../views/RegisterView'
+import testView from '../views/test'
+import demoView from '../views/demo'
 
 Vue.use(Router)
 
@@ -59,6 +61,7 @@ export default new Router({
           name: 'DetailView',
           component: DetailView
         }
+
       ]
     },
     {
@@ -90,6 +93,16 @@ export default new Router({
     {
       path: '*',
       redirect: '/pages/'
+    },
+    {
+      path: '/test',
+      name: 'testView',
+      component: testView
+    },
+    {
+      path: '/demo',
+      name: 'demoView',
+      component: demoView
     }
   ]
 })
